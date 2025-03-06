@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyian Kambe - A Paragon of Ingenuity</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Cinzel:wght@400;700&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Mystical and Mythical Theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-bg: #283655;
+      /* Deep, starry blue */
+      --secondary-bg: #405787;
+      /* Slightly lighter blue for contrast */
+      --card-bg: #555555;
+      /* Darker grey */
+      --header-bg: #334766;
+      /* Darker blue for the header */
+      --text-color: #E8E8E8;
+      /* Off-white for readability */
+      --accent-color: #8E7DBE;
+      /* Subtle purple accent */
+      --button-bg: #8E7DBE;
+      /* Purple button */
+      --button-hover-bg: #6B549C;
+      /* Darker purple on hover */
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      /* Elegant serif font */
+      background: var(--primary-bg);
+      color: var(--text-color);
+      padding-top: 100px;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+      /* Add a subtle gradient for an ethereal feel */
+      background: linear-gradient(to bottom, var(--primary-bg), #405787);
+    }
+
+    header {
+      background: var(--header-bg);
+      color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Toggle Buttons */
+    .menu-toggle {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-left: 10px;
+      display: none;
+    }
+
+    .dark-mode-toggle {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-left: 10px;
+      display: block;
+    }
+
+    /* Navigation styles */
+    nav {
+      margin-left: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-family: 'Cinzel', serif;
+      /* Stately font for tabs */
+      /* Add a subtle text shadow for a magical touch */
+      text-shadow: 0 0 5px rgba(142, 125, 190, 0.8);
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+      /* Add a subtle shimmer effect on hover */
+      animation: shimmer 1.5s infinite alternate;
+    }
+
+    @keyframes shimmer {
+      0% {
+        color: #E8E8E8;
+      }
+
+      100% {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(142, 125, 190, 1);
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--secondary-bg);
+      padding: 60px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Add a subtle background pattern for a mystical touch */
+      background-image: url("path/to/your/subtle-pattern.png");
+      /* Replace with your pattern */
+      background-repeat: repeat;
+      background-size: cover;
+      /* Add the knight and dragon image */
+      background-image: url("https://www.wallpaperflare.com/static/550/851/988/the-witcher-3-wild-hunt-geralt-of-rivia-wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      /* To position the content over the image */
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      /* To ensure content is above the image */
+      z-index: 2;
+      /* Ensure content is above the image */
+    }
+
+    .hero-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Main sections */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--secondary-bg);
+      padding: 40px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      scroll-margin-top: 40px;
+      /* Add a subtle border for a touch of elegance */
+      border: 1px solid #6B549C;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+      font-family: 'Playfair Display', serif;
+      /* Elegant font for headings */
+    }
+
+    /* Experience & Education Cards */
+    .experience-cards,
+    .education-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .experience-card,
+    .education-card {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent-color);
+      padding: 20px;
+      border-radius: 5px;
+      flex: 1 1 calc(50% - 20px);
+      transition: transform 0.3s;
+      position: relative;
+      /* For interactive box shadow */
+      overflow: hidden;
+      /* For interactive box shadow */
+    }
+
+    .experience-card:hover,
+    .education-card:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 15px rgba(142, 125, 190, 0.5);
+      /* Interactive box shadow */
+    }
+
+    .experience-card:before,
+    .education-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(142, 125, 190, 0.2));
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: -1;
+      /* Keep it behind the content */
+    }
+
+    .experience-card:hover:before,
+    .education-card:hover:before {
+      opacity: 1;
+    }
+
+    /* Projects Section */
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      flex: 1 1 calc(50% - 20px);
+      transition: transform 0.3s;
+      position: relative;
+      /* For interactive box shadow */
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(142, 125, 190, 0.5);
+      /* Interactive box shadow */
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-card h3 {
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+
+    .project-card p {
+      padding: 0 10px 10px;
+    }
+
+    .project-card a.button {
+      margin: 10px;
+    }
+
+    /* Testimonials Section */
+    #testimonials blockquote {
+      background: transparent;
+      border-left: 4px solid var(--accent-color);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      font-style: italic;
+      position: relative;
+      line-height: 1.6;
+      color: var(--text-color);
+      transition: transform 0.3s;
+      font-family: 'Alex Brush', cursive;
+      /* Graceful script for testimonials */
+    }
+
+    #testimonials blockquote:hover {
+      transform: translateX(5px);
+    }
+
+    #testimonials blockquote footer {
+      text-align: right;
+      margin-top: 10px;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .contact-container h2 {
+      font-family: 'Playfair Display', serif;
+      /* Elegant font for headings */
+    }
+
+    .contact-container p a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .contact-container p a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--button-hover-bg);
+      text-decoration: underline;
+    }
+
+    /* Social Media */
+    .social-media {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+    /* Button styles */
+    .button {
+      background-color: var(--button-bg);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      border-radius: 4px;
+      font-family: 'Dancing Script', cursive;
+      /* Playful font for buttons */
+    }
+
+    .button:hover {
+      background-color: var(--button-hover-bg);
+      transform: scale(1.05);
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--header-bg);
+      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .menu-toggle,
+      .dark-mode-toggle {
+        display: block;
+        /* Show both toggles on mobile */
+      }
+
+      nav {
+        position: fixed;
+        top: 60px;
+        right: -250px;
+        width: 250px;
+        background: var(--header-bg);
+        height: 100%;
+        transition: right 0.3s;
+        padding: 20px;
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      /* Hero layout stacks on smaller screens */
+      .hero-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .hero-photo {
+        margin: 0 auto;
+      }
+
+      /* Stack cards */
+      .experience-cards,
+      .education-cards,
+      .project-cards {
+        flex-direction: column;
+      }
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: var(--header-bg);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      right: 0;
+      /* Align to the right edge */
+    }
+
+    .dropdown-menu a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .show {
+      display: block;
